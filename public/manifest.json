@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "uFaculties",
+  "name": "Faculty Management System Of University Of Engineering And Technology",
   "icons": [
     {
       "src": "favicon.ico",

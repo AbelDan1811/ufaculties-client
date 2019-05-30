@@ -1,0 +1,10 @@
+.Header {
+    line-height: 100px !important;
+}
+
+
+.LeftItems {
+    position : absolute;
+    float: right;
+    right: 40;
+}

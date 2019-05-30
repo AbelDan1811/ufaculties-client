@@ -1,0 +1,19 @@
+.AlignCenter {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 40%;
+
+}
+
+.SeperateBottom {
+    margin-bottom: 10vh    ;
+}
+
+.ButtonAlignCenter {
+    margin: auto !important;
+    width: 100%;
+}
+.TextAlignCenter {
+    text-align: center;
+}
+
