@@ -32,7 +32,7 @@ class Department extends React.Component {
                     <TabPane tab={
                             <span>
                                 <Icon type="unordered-list" />
-                                DANH SÁCH ĐƠN VỊ
+                                <b>DANH SÁCH ĐƠN VỊ</b>
                             </span>
                         } key="1" >
                         <DepartmentList user={user} items={this.state.items} reloadOnSubmit={this.fetchDepartments} />
@@ -40,7 +40,7 @@ class Department extends React.Component {
                     <TabPane tab={
                             <span>
                                 <Icon type="search" />
-                                TRA CỨU CÁN BỘ
+                                <b>TRA CỨU CÁN BỘ</b>
                             </span>
                         } key="2" >
                         <DepartmentLookUp user={user} items={this.state.items} />

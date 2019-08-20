@@ -93,10 +93,23 @@ export const bulkSave = async (formData) => {
     const headers = {
         'Authorization' : 'Bearer '+token,
     }
-    console.log(formData)
     return await getApiResponse({
         method : 'POST',
         url : 'users/bulk',
+        data : formData,
+        headers 
+    }) 
+}
+
+
+export const uploadAvatar = async ({ userId, formData }) => {
+    const token = getCookie('token')
+    const headers = {
+        'Authorization' : 'Bearer '+token,
+    }
+    return await getApiResponse({
+        method : 'POST',
+        url : `users/${userId}/avatar`,
         data : formData,
         headers 
     }) 

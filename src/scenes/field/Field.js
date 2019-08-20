@@ -82,7 +82,7 @@ class Field extends React.Component {
                     <TabPane tab={
                             <span>
                                 <Icon type="unordered-list" />
-                                DANH SÁCH LĨNH VỰC NGHIÊN CỨU
+                                <b>DANH SÁCH LĨNH VỰC NGHIÊN CỨU</b>
                             </span>
                         } key="1" >
                         <div className='SeparatedTop'>

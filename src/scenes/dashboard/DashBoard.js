@@ -54,7 +54,7 @@ class DashBoard extends React.Component {
         return (
             <div>     
                 <Tabs defaultActiveKey="1" size = "large" tabBarGutter={300}>
-                    <TabPane tab={<span><Icon type="unordered-list" />DANH SÁCH CÁN BỘ</span>} key="1" >
+                    <TabPane tab={<span><Icon type="unordered-list" /><b>DANH SÁCH CÁN BỘ</b></span>} key="1" >
                         <div className="SeparatedTop">
                             <div style={{ marginBottom : "3vh"}}> 
                                 <Row>

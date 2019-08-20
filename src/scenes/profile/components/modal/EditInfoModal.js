@@ -50,9 +50,8 @@ class EditInfoModal extends React.Component {
 
         if (!this.isValidatedForm())
             return 
-
         const { _id ,fullName, email, phoneNumber, website, degree, department } = this.state.user
-        const payload = {fullName, email, phoneNumber, website, degree, department : department._id }
+        const payload = {fullName, email, phoneNumber, website, degree, department: department ? department : null }
         const { success, data, message} = await updateUser({
             userId : _id,
             payload

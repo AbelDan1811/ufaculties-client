@@ -20,8 +20,7 @@ class Profile extends React.Component {
             user : null,
             token : null
         })
-        console.log(this.props.appState)
-        window.location.href = '/';
+        window.location.replace('/')
     }
 
     componentWillMount = async () => {

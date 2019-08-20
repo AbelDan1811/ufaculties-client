@@ -30,10 +30,11 @@ class EditResearchModal extends React.Component {
 
     showModal = async () => {
         const fulfilledNodes = await this._getAllNodes()
+        const {interestedFields, researchFields} = this.props.user
         this.setState({
             visible : true,
-            expandedKeys : this.props.user.interestedFields.map( f => f._id),
-            checkedKeys : this.props.user.researchFields.map( f => f._id),
+            expandedKeys : interestedFields ? interestedFields.map( f => f._id) : [],
+            checkedKeys : researchFields ? researchFields.map( f => f._id) : [],
             items : fulfilledNodes
         })
     }

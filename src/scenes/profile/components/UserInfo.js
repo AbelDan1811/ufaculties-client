@@ -1,7 +1,8 @@
 import React from 'react'
-import { Row, Col, Descriptions, Card, Button, Icon, List} from 'antd'
-import {findUser} from '../../../services/apis/UserService'
+import { Row, Col, Descriptions, Card} from 'antd'
 import EditInfoModal from './modal/EditInfoModal'
+import EditAvatarModal from './modal/EditAvatarModal'
+import Meta from 'antd/lib/card/Meta';
 
 class UserInfo extends React.Component {
     
@@ -44,9 +45,19 @@ class UserInfo extends React.Component {
                         <Card
                             hoverable
                             style={{ width: "100%", height : "70%"}}
-                            cover={<img alt="example" src="https://v.cdn.vine.co/r/avatars/D20A124A701123838177795604480_28b119f5c49.5.1.jpg?versionId=o9sMMhKUEgpyMW49arDnJUwx6hby8Uvu" />}
-                            actions={[<Icon type="edit" onClick={()=> alert("Yay")}/>,<Icon type="delete" /> ]}
-                        />
+                            cover={<img src={ user.avatarUrl ? user.avatarUrl : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"} />}
+                        >
+                            <Meta title ={                                    
+                                requestUser._id === user._id ? 
+                                <Row>
+                                    <Col offset={18} span={2}>
+                                        <EditAvatarModal user={user} reloadOnSubmit={reloadOnSubmit}/>
+                                    </Col>
+                                </Row>
+                                : null
+                            } />
+                            
+                        </Card>
                     </Col>
                 </Row>
             </>
