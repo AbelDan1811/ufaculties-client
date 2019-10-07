@@ -2,20 +2,17 @@ import React, {Component} from 'react'
 import Header from './Header'
 import AppContext from '../../AppContext'
 
-class HeaderContainer extends Component {
-    render() {
-
+const HeaderContainer = (props) => {
         return (
             <AppContext.Consumer>
                 { context  => <Header 
                     {...{
                         ...context,
-                        ...this.props
+                        ...props
                     }} 
                 />}
             </AppContext.Consumer>
         )
-    }
 }
 
 export default HeaderContainer

@@ -2,12 +2,8 @@ import React, {Component} from 'react'
 import {Avatar, Button } from 'antd'
 import {Link} from 'react-router-dom'
 
-class UserBar extends Component {
-
-    
-
-    render() {
-        const {user} = this.props.appState
+const UserBar = (props) => {
+        const {user} = props.appState
         const { username, avatarUrl, _id } = user
         if (username) {
             return (
@@ -26,7 +22,6 @@ class UserBar extends Component {
                 </Link>
             </Button>
         )
-    }
 }
 
 export default UserBar
